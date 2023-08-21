@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+
+*{
+  font-family: 'Rubik';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundColor: #D3D3D3;
+  --backgroundProgressbar: #D3D3D3;
+  --backgroundLight: #F1F1F1;
+  --backgroundElement: #EC6E4D;
+  --whiteСolor: #FFF;
+  --errorСolor: #FFF;
+  --blackColor: #000;
+  --textСolor: #48484A;
+  --textLight: #ACACAC;
+  --lightGray: #E6E6E6;
+  --scale: 1;
+  --backgroundCloud: url("../styles/img/png/Cloud-background.png") center no-repeat;
+}
+
+[dark] {
+  --backgroundColor: #6D6D6D;
+  --backgroundProgressbar: #E6E6E6;
+  --backgroundLight: #100E1C;
+  --whiteСolor: #212331;
+  --textСolor: #E6E6E6;
+  --blackColor: #E6E6E6;
+  --lightGray: #100E1C;
+  --errorСolor: #100E1C;
+  --scale: 1.1;
+  --backgroundCloud: url("../styles/img/png/Cloud-dark.png") center no-repeat;
+}
+
+body{
+  background-color: var(--backgroundColor);
+  transition: background-color .5s;
+}

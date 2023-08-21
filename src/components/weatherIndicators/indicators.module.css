@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100px;
+  min-height: 143px;
+  border-radius: 8px;
+  padding: 15px 0;
+  background-color:  var(--whiteСolor);
+  transition: background-color .5s;
+  box-shadow: 0px 7px 12px 0px #0000000D;
+}
+
+.card figcaption {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--textСolor);
+}
+
+.card img{
+  object-fit: cover;
+}
+
+.card figcaption span[data-fluid] {
+  color: var(--backgroundColor);
+}
+
+.cardAnimation {
+  animation: flipOutRight 1s cubic-bezier(1, 0.055, 0.680, 0.530) reverse both;
+}
+
+@keyframes flipOutRight {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+    opacity: 0;
+  }
+}
+
+/*!=================preloader============ */
+.ldsEllipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.ldsEllipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--textСolor);
+}
+
+.ldsEllipsis div:nth-child(1) {
+  left: 8px;
+  animation: ldsEllipsis1 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(2) {
+  left: 8px;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(3) {
+  left: 32px;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+
+.ldsEllipsis div:nth-child(4) {
+  left: 56px;
+  animation: ldsEllipsis3 0.6s infinite;
+}
+
+@keyframes ldsEllipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ldsEllipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes ldsEllipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}

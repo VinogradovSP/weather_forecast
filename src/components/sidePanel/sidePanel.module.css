@@ -1,0 +1,126 @@
+.sidePanel{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -500px;
+  z-index: 2;
+  transition: all 0.5s;
+  box-shadow: 10px 0 20px rgba(0,0,0,0.1);
+  background-color: var(--whiteСolor);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  padding-top: 46px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.panelAdd{
+  left: 0;
+  opacity: 1;
+  visibility: visible
+}
+
+.error {
+  position: absolute;
+  max-width: 270px;
+  top: -40px;
+  left: 40px;
+  background-color: var(--errorСolor);
+  color: var(--backgroundElement);
+  text-align-last: left;
+  line-height: 30px;
+  padding: 5px 15px;
+  opacity: 0;
+  z-index: 3;
+  text-align: start;
+  transition: all 0.5s;
+}
+
+.errorOpen {
+  top: 40px;
+  opacity: 1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px #0000001a;
+}
+
+.x{
+  width: 35px;
+  height: 35px;
+  margin: 0 0 36px auto;
+  cursor: pointer;
+}
+
+._iconX{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all .9s;
+}
+
+._iconX::before,
+._iconX::after{
+  content: '';
+  background-color: var(--textСolor);
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+}
+
+._iconX::before{
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+._iconX::after{
+  transform: rotate(45deg);
+  bottom: 16px;
+}
+
+._iconX:hover:after,
+._iconX:hover:before  {
+  background-color: var(--backgroundElement);
+  width: 80%;
+  left: 4px;
+}
+
+._iconX:hover {
+  box-shadow: 0px 0px 20px 10px #0000001a;
+  border-radius: 50%;
+  transform: rotate(360deg);
+} 
+
+.panelForm{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1440px) {
+  .sidePanel {
+    padding: 0 40px;
+    padding-top: calc(59px + (40 - 59) * ((100vw - 834px) / (1440 - 834)));
+  }
+
+  .error{
+    left: calc(27px + (40 - 27) * ((100vw - 834px) / (1440 - 834)));
+    top: calc(80px + (60 - 80) * ((100vw - 834px) / (1440 - 834)));
+  }
+}
+
+@media (max-width: 834px) {
+  .sidePanel {
+    padding: 40px calc(30px + (140 - 30) * ((100vw - 300px) / (834 - 300)));
+  }
+
+  .error{
+    left: 27px;
+    top: 60px;
+  }
+
+  .x{
+    margin: 0 23px 37px auto;
+  }
+}

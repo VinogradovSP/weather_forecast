@@ -1,0 +1,33 @@
+.weather{
+  max-width: 1440px;
+  margin: 100px auto;
+  display: flex;
+}
+
+.forecast{
+  background-color: var(--backgroundLight);
+  transition: background-color .5s;
+  padding-top: 42px;
+  padding-bottom: 44px;  
+}
+
+@media (max-width: 1440px) {
+  .forecast{
+    padding-top: calc(61px + (42 - 61) * ((100vw - 834px) / (1500 - 834)));
+  }
+}
+
+@media (max-width: 1300px) {
+  .weather{
+    margin: 0 auto;
+  }
+  .forecast{
+    width: 100%;
+  }
+}
+
+@media (max-width: 834px){
+  .weather{
+    display: block;
+  }
+}

@@ -1,0 +1,169 @@
+.today{
+  padding: 38px 130px 0;
+  color: var(--textСolor);
+}
+
+.todayBlock {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 19px;
+  justify-content: space-between;
+  row-gap: 17px;
+}
+
+.itemToday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  background-color: var(--whiteСolor);
+  transition: background-color .5s;
+  box-shadow: 0px 8px 15px 0px #0000000D;
+  border-radius: 10px;
+  min-height: 162px;
+  max-height: 181px;
+  padding: 20px 25px 24px 25px;
+}
+
+.itemTodaySpan {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.itemTodaySpanLast{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textTop,
+.textBottom{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 11px;
+}
+
+.textBottom{
+  margin-bottom: 21px;
+}
+
+.itemToday p {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 66px;
+}
+
+.wind {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.wind img{
+  transition: all .8s;
+}
+
+.progressbarBlock {
+  position: relative;
+  padding-top: 20px;
+  height: 43px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: var(--textСolor);
+}
+
+.progressbarBlock::before{
+  content: "100";
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+.progressbarBlock::after{
+  content: "%";
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+}
+
+.progressbar {
+  position: relative;
+  height: 11px;
+  border-radius: 10px;
+  background: var(--backgroundProgressbar);
+}
+
+.progressbar::before {
+  content: "0";
+  position: absolute;
+  left: 0;
+  top: -15px;
+}
+
+.progressbar::after {
+  content: "50";
+  position: absolute;
+  left: calc(50% - 8px);
+  top: -15px;
+}
+
+.progressbar div{
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  width: 84%;
+  height: 11px;
+  background: var(--backgroundElement);
+  transition: all .8s;
+}
+
+.progressbar progress::-webkit-progress-value {
+  border-radius: 10px;
+  height: 11px;
+  width: 100%;
+  background: var(--backgroundColor);
+}
+
+.progressbar progress::-moz-progress-bar {
+  border-radius: 5px;
+  background: #ffb76b;
+}
+
+@media (max-width: 1440px) {
+  .today{
+    padding-top: 59px;
+    padding-left: calc(10px + (130 - 10) * ((100vw - 320px) / (1500 - 320)));
+    padding-right: calc(10px + (130 - 10) * ((100vw - 320px) / (1500 - 320)));
+  }
+}
+
+@media (max-width: 1300px) {
+  .itemToday {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+  .todayBlock{
+    display: block;
+    margin-top: 27px;
+  }
+  .progressbarBlock {
+    width: 90%;
+  }
+}
+
+@media (max-width: 834px) {
+  .today {
+    text-align: center;
+  }
+  .progressbarBlock {
+    width: 100%;
+  }
+
+  .todayBlock{
+    padding: 0 calc(0px + (80 - 0) * ((100vw - 330px) / (834 - 330)));
+  }
+}

@@ -1,0 +1,30 @@
+.inputSearch {
+  width: 250px;
+  min-height: 50px;
+  margin-right: 22px;
+  border-radius: 10px;
+  padding: 0 10px 0 45px;
+  background: url('../../../styles/img/svg/search.svg') no-repeat;
+  background-position-x: 15px;
+  background-position-y: 45%;
+  border: 2px solid var(--textLight);
+  background-color:  var(--whiteСolor);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--textСolor);
+}
+
+.inputSearch::placeholder {
+  font-weight: 300;
+}
+
+.inputSearch:focus::placeholder{
+  opacity: 0;
+}
+
+@media (max-width: 1440px) {
+  .inputSearch {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}

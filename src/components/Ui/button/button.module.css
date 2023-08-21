@@ -1,0 +1,31 @@
+.button{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--textСolor);
+  text-align: center;
+  border: 2px solid var(--textLight);
+  border-radius: 10px;
+  background-color: var(--whiteСolor);
+  cursor: pointer;
+}
+
+.buttonClick:hover {
+  transform: scale(var(--scale));
+  box-shadow: -3px 5px 10px 2px #0000001a;
+  transition: all .2s;
+}
+
+.buttonClick:active {
+  box-shadow: none;
+  transform: none;
+}
+
+.buttonTop{
+  padding: 15px 27px;
+}
+
+.buttonPanel{
+  padding: 15px 20px 11px;
+  height: 50px;
+}
