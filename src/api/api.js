@@ -1,4 +1,5 @@
-const key = "b8f025b5d531b3074e553974fa7fe9af";
+// const key = "b8f025b5d531b3074e553974fa7fe9af";
+const key = process.env.REACT_APP_WEATHER_API_KEY;
 
 export const cityData = async (value) => {
   const response = await fetch(
